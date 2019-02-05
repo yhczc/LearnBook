@@ -1,0 +1,21 @@
+{
+  "title": "HTML 教程",
+  "description": "HTML 教程- (HTML5 标准)  超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+    "styles": {
+        "website": "styles/website.css"
+     },
+    "plugins": [
+        "include-codeblock","theme-official@2.1.1", "advanced-emoji","disqus"
+    ],
+    "pluginsConfig": {
+        "include-codeblock": {
+            "template": "ace",
+            "theme": "monokai"
+        },
+ "disqus": {
+            "shortName": "edit"
+        }
+    }
+}
