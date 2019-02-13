@@ -1,2 +1,3 @@
-- [学习 CSS](/CSS)
-- [学习 HTML](/HTML) 
+- [学习 CSS](/css)
+- [学习 HTML](/html) 
+- [学习 JavaScript](/js) 
