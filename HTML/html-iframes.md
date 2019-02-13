@@ -1,6 +1,6 @@
 # HTML 框架 
 通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。
-<iframe src="/index.html"></iframe>
+<iframe src="/index.html"></iframe>  
 **iframe语法:**
 ```html
 <iframe src="URL"></iframe>
