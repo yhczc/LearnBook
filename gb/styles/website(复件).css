@@ -1,0 +1,83 @@
+.gb-markdown code {
+    background-color: #d4d4d4;
+}
+
+blockquote.issue
+,blockquote.note
+,blockquote.example
+,blockquote.why
+,blockquote.advisement
+,blockquote.tip {
+    padding: .6em;
+    border: .5em;
+    border-left-style: solid;
+    page-break-inside: avoid;
+    color: black;
+}
+
+.note::before
+,.issue::before
+,.example::before
+,.why::before
+,.tip::before {
+    font-weight: bold;
+    font-family: Times, Georgia, serif;
+}
+
+blockquote.tip, blockquote.why {
+    border-color: hsl(120, 60%, 48%);
+    background: #E9FBE9;
+    overflow: auto;
+}
+
+.tip::before {
+    content: "Tip:\00a0";
+    color: limegreen;
+}
+
+blockquote.example {
+    border-color: #E0CB52;
+    background: #FCFAEE;
+    counter-increment: exampleno;
+    overflow: auto;
+    clear: both;
+}
+
+blockquote.note {
+    background: #e2eef9;
+    border-color: #bac6d3;
+    color: #246;
+}
+
+.note::before {
+    content: "Note:\00a0";
+}
+
+.example::before {
+    content: "Example:\00a0";
+    color: #827017;
+}
+
+blockquote.issue {
+    border-color: #E05252;
+    background: #FBE9E9;
+    counter-increment: issue;
+    overflow: auto;
+}
+
+.issue::before {
+    content: "ISSUE:\00a0";
+    color: #AE1E1E;
+}
+
+blockquote.advisement {
+    border-color: orange;
+    border-style: none solid;
+    background: #FFEECC;
+    text-align: center;
+}
+
+.no-underline:hover
+,.no-underline a:hover {
+    text-decoration: none;
+}

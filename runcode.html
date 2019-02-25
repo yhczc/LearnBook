@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>基于codeMirror实时在线编辑器</title>
+
+	<!--theme皮肤的设置-->
+   <!-- <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/codemirror/5.40.2/theme/ambiance.min.css"/>-->
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+ <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"> -->
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.egret.com/themes_cn/simplebootx/Public/css/header.css?v1"> 
+  <link rel="stylesheet" href=" https://www.egret.com/themes_cn/simplebootx/Public/css/global.css?v=20170729"> 
+ 
+	<script type="text/javascript" src="https://cdn.staticfile.org/codemirror/5.40.2/keymap/sublime.min.js"></script>	
+    </script><script src="https://cdn.staticfile.org/codemirror/5.40.2/codemirror.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/codemirror/5.40.2/codemirror.min.css">
+	<script src="https://cdn.staticfile.org/codemirror/5.40.2/mode/htmlmixed/htmlmixed.min.js"></script>
+	<script src="https://cdn.staticfile.org/codemirror/5.40.2/mode/css/css.min.js"></script>
+	<script src="https://cdn.staticfile.org/codemirror/5.40.2/mode/javascript/javascript.min.js"></script>
+	<script src="https://cdn.staticfile.org/codemirror/5.40.2/mode/xml/xml.min.js"></script>
+	<style>
+	#preview {
+	    display: block;
+		overflow: hidden;
+		border: 0!important;
+		min-width: 100px;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+	}
+	.CodeMirror {
+	line-height: 1.3em;
+    font-family: monospace;
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 9px;
+     }
+
+	</style>
+  <link rel="stylesheet" href="assets/css/jqx.base.css" type="text/css" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" /> 
+  <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script> 
+  <script type="text/javascript" src="assets/js/jqxcore.js"></script> 
+  <script type="text/javascript" src="assets/js/jqxsplitter.js"></script> 
+  <script type="text/javascript" src="assets/js/jqxtabs.js"></script> 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var winHeight=0;
+			if (window.innerHeight) {
+				winHeight = window.innerHeight;
+			} else if ((document.body) && (document.body.clientHeight)) {
+				winHeight = document.body.clientHeight;
+			}
+			//通过深入Document内部对body进行检测，获取浏览器窗口高度
+			if (document.documentElement && document.documentElement.clientHeight) {
+				winHeight = document.documentElement.clientHeight;
+			}
+			$("#isautorun").prop( "checked", true );
+			height = (winHeight - 60) * 0.86;
+			$('#splitContainer').jqxSplitter({ height: height, width: '100%', orientation: 'vertical', panels: [{ size: '50%' }, { size: '50%' }] });
+			$('#leftSplitter').jqxSplitter({ height: '100%', width: '100%', orientation: 'horizontal',  panels: [{ size: '50%' }, { size: '50%'}] });
+			$('#rightSplitter').jqxSplitter({ height: '100%', width: '100%', orientation: 'horizontal',  panels: [{ size: '50%' }, { size: '50%'}] });
+
+        });
+    </script>
+</head>
+<body class="body-white" style="overflow: auto;">
+ <header> 
+   <nav> 
+    <div class="title mobile clearfix">
+     白鹭科技 
+     <a href="http://www.egret.com/en/" target="_top" style="position: absolute;width: 30px;height: 30px;line-height:30px;border-radius:15px;border: none;color: #fff; background: #487AF6;right: 40px;top: 15px;text-align: center;" class="language">EN</a> 
+    </div> 
+    <img src="https://cdn.www.egret.com/official/new-egret/img/navmore.png" class="navMore mobile" /> 
+    <button class="navMore mobile"> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+    <ul class="menu" id="allmenu"> 
+     <img class="navImg" style="width:126px;height:40px;position:absolute;top:9px;left:80px" src="https://egret.com/img/homepage/dist/newIndex/logo.png" /> 
+     <li class="menuHomepage"> <a href="/index">首页</a> </li> 
+     <li class="menuProduct"> <a href="/products/" target="_top">产品</a> </li> 
+     <li class="menuCase"> <a href="/solution/" target="_top">解决方案</a> </li> 
+     <li class="menuDevCenter"> <a href="http://developer.egret.com/cn/" target="_blank">开发者中心</a> </li> 
+     <li class="menuCase"> <a href="/case" target="_top">案例</a> </li> 
+     <li class="menuCase"> <a href="/playable" target="_top">众包平台</a> </li> 
+     <li class="menuHDSA "> <a href="http://edu.egret.com/" target="_blank">教育</a> </li> 
+     <!--<li class="menuHDSA ">--> 
+     <!--<a href="http://ssp.egret.com/" target="_blank">广告</a>--> 
+     <!--</li>--> 
+     <li class="menuOpen "> <a href="/egretia" target="_top">区块链实验室</a> </li> 
+     <li class="menuBBS"> <a href="http://bbs.egret.com/" target="_blank">社区</a> </li> 
+     <li class="menuAbout"> <a href="/about" target="_top">关于我们</a> </li> 
+     <!-- <li class="mobile"><a href="http://www.egret.com/en/" target="_top">中文／English</a></li> --> 
+     <li class="pc"> 
+      <!-- <a href="http://www.egret.com/en/" target="_top" style="position: absolute;width: 107px;border: none; background: none;right: 10%;top: 0;">中文／English</a> --> <a href="http://www.egret.com/en/" target="_top" style="position: absolute;width: 30px;height: 30px;line-height:30px;border-radius:15px;border: none;color: #fff; background: #487AF6;right: 137px;top: 15px;" class="language">EN</a> </li> 
+    </ul> 
+    <!-- nav --> 
+    <ul class="subnav subnav-products flex" style="left: 311px; display: none;"> 
+     <li class="productBox"> <a href="/products/engine.html" target="_top"> <i></i> <img src="https://cdn.www.egret.com/official/new-egret/img/nav/product-icon-engine.jpg" /> <span>Egret Engine</span> </a> </li> 
+     <li class="productBox"> <a href="http://developer.egret.com/cn/docs/3d/" target="_blank"> <i></i> <img src="https://egret.com/img/3D/img/logo.png" style="width:35px;height:35px;" /> <span>Egret3D</span> </a> </li> 
+     <li class="productBox"> <a href="/native.html" target="_top"> <i></i> <img src="https://cdn.www.egret.com/official/new-egret/img/product-icon-native.jpg" style="width:35px;" /> <span>Egret Native</span> </a> </li> 
+     <li class="productBox"> <a href="/products/wing.html" target="_top"> <i></i> <img src="https://cdn.www.egret.com/official/new-egret/img/nav/product-icon-wing.jpg" /> <span>Egret Wing</span> </a> </li> 
+     <li class="productBox"> <a href="/products/dragonbones.html" target="_top"> <i></i> <img src="https://cdn.www.egret.com/official/new-egret/img/nav/product-icon-dragonbones.jpg" /> <span>DragonBones</span> </a> </li> 
+  
+     <li class="productBox"> <a href="/products/others.html#egret-feather" target="_top"> <i></i> <img src="https://cdn.www.egret.com/official/new-egret/img/nav/product-icon-feather.jpg" /> <span>Egret Feather</span> </a> </li> 
+     <li class="productBox"> <a href="/products/others.html#egret-texture" target="_top"> <i></i> <img src="https://cdn.www.egret.com/official/new-egret/img/nav/product-icon-texture.jpg" /> <span>Texture Merger</span> </a> </li> 
+     <li class="productBox"> <a href="/products/others.html#res-depot" target="_top"> <i></i> <img src="https://cdn.www.egret.com/official/new-egret/img/nav/product-icon-resdepot.jpg" /> <span>Res Depot</span> </a> </li> 
+     <li class="productBox"> <a href="/products/others.html#egret-inspector" target="_top"> <i></i> <img src="https://cdn.www.egret.com/official/new-egret/img/nav/product-icon-inspector.jpg" /> <span>Egret Inspector</span> </a> </li> 
+     <!-- <li class="productBox"> <a href="/products/microclient.html" target="_top"> <i></i> <img src="https://cdn.www.egret.com/official/new-egret/img/nav/product-icon-microclient.jpg" / style="width:35px;"> <span>Egret Micro Client</span> </a> </li> --> 
+     <li class="productBox"> <a href="/products/lakeshore.html" target="_top"> <i></i> <img src="https://cdn.www.egret.com/official/new-egret/img/nav/product-icon-lakeshore.jpg" /> <span>Lakeshore</span> </a> </li> 
+     <li class="productBox disable"></li> 
+     <li class="productBox disable"></li> 
+    </ul> 
+    <ul class="subnav subnav-club" style="display: none;"> 
+    </ul> 
+   </nav> 
+  </header>
+ <div class="container-fluid">
+<div id="show" style="display:none;"></div>
+  <div class="row" style="padding-top:12px;" >
+	 <div class="col-md-12">
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <form class="form-inline" role="form">
+				<label style="margin-right:12px;"><strong style="font-size: 16px"><i class="fa fa-cogs"></i> HTML/CSS/JS 在线工具</strong></label>
+				<button type="button" class="btn btn-warning" id="basehtml">HTML 模板</button>
+				<div class="form-group">
+				 <button type="button" class="btn btn-success"  onclick="setPreview()" >运行</button>
+				</div>
+			  </form>
+		 </div>
+			<div class="panel-body" style="padding:0;"> 
+		
+			  <div id="splitContainer">
+					<div>
+						<div id="leftSplitter">
+							<div>
+								<textarea placeholder="输入 HTML 代码……" id="htmlEdit" >
+														<!--给出html5的模板-->
+														<!DOCTYPE html>
+														<html>
+														<head>
+															<meta charsset="utf-8"/>
+															<title></title>
+														</head>
+														<body>
+														
+														</body>
+														</html>
+													</textarea>
+							</div>
+							<div>
+								<textarea placeholder="输入 JavaScript 代码……" id="jsEdit" >
+								<script>
+
+								</script>
+                                                  </textarea>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div id="rightSplitter">
+							<div>
+								<textarea placeholder="输入 CSS 代码……" id="cssEdit" >
+													 <style type="text/css">
+						 
+													 </style>
+													</textarea>
+							</div>
+							<div>
+								<!--实时预览区域-->
+								   <iframe id="preview" name="preview" ></iframe>
+							</div>
+						</div>
+					</div>
+				   </div>
+			</div>
+		  </div>
+	  </div>
+  </div>
+ </div>
+</body>
+<script type="text/javascript">
+     		      
+ //获得编辑区域，整个body为编辑区域
+/*var myCodeMirror = CodeMirror(document.body, {
+  value: "function myScript(){return 100;}\n",
+  mode:  "javascript"
+  theme: "ambiance"
+});*/ 
+//mode:"htmlmixed",                         //引入html高亮相关文件
+//		lineNumbers:true,                         //打开行号
+//		theme:"ambiance",                         //引入主题
+//		tabSize:4      
+//extraKeys: {"Ctrl-B": setPreview}       //设置快捷键                  
+ var cm_opt = {
+		mode: 'text/html',
+		gutter: true,
+		lineNumbers: true,
+		autoCloseBrackets:true,
+		lineWrapping: true,
+		matchBrackets: true,
+		autoCloseTags:true
+	};
+/*获得html代码编写区域，进行一些基本配置，比如行号是否显示，皮肤设置，tab长度，快捷键，当然还有与html高亮显示有关的js文件：htmlmixed*/
+var htmlDom=idDom("htmlEdit");
+var htmlMirror = CodeMirror.fromTextArea(htmlDom,cm_opt);	
+ 
+/*与上面html相似*/
+var cssDom=idDom("cssEdit");
+var cssMirror = CodeMirror.fromTextArea(cssDom,cm_opt);	
+ 
+ 
+/*与上面html相似 这里多配置了一个快捷键，当按下这个快捷键就会，执行这个函数*/
+var jsDom=idDom("jsEdit");
+var jsMirror = CodeMirror.fromTextArea(jsDom,cm_opt);	
+ 
+ 
+window.onload=function(){
+      getUrlParam("name")
+      htmlobj=$.ajax({url:getUrlParam("name")+"/index.html",async:false});
+      htmlMirror.setValue(htmlobj.responseText);              
+	//给html编写区域添加事件，当区域中的内容改变时就会执行下面的函数
+	htmlMirror.on("change",function(){   
+                
+		//实时在iframe中实时显示
+		setPreview();   
+		//将数据保存在浏览器中，刷新也不会数据丢失，可以继续编写
+		setEditorData();  
+	});
+ 
+	//与上同理
+	cssMirror.on("change",function(){
+		setPreview();
+		setEditorData();
+	});	
+ 
+	//js没有进行实时效果，当js写完后可以按快捷键Ctrl+B，进行预览
+ 
+/*将保存在浏览器中的数据提取出来，写到html区域，css区域，
+和js区域中这样刷新后数据不会丢失*/
+	if(window.localStorage){
+		//getEditorData();
+	}	
+}
+ 
+ 
+// 拿到html css js数据,将数据写到预览区域
+function setPreview(){
+	var iframeDom=idDom("preview")
+	var htmlSource=	htmlMirror.getValue()
+	var cssSource=	cssMirror.getValue()
+	var jsSource=	jsMirror.getValue()
+ 
+	preview.document.open();
+	preview.document.write(htmlSource);
+	preview.document.write(jsSource);
+	preview.document.write(cssSource);
+	preview.document.close();	
+}
+ 
+ 
+/*function setSource(){
+	//htmlMirror.setValue="wegvergb"
+	var htmlSource=	htmlMirror.getValue()
+	var cssSource=	cssMirror.getValue()
+	var jsSource=	jsMirror.getValue()
+	htmlMirror.setValue(htmlSource)
+	cssMirror.setValue(cssSource)
+	jsMirror.setValue(jsSource)
+}*/
+ 
+function getEditorData(){
+	var htmlData = localStorage.getItem("html_editor_data");
+		var jsData = localStorage.getItem("js_editor_data");
+		var cssData = localStorage.getItem("css_editor_data");
+		htmlMirror.setValue(htmlData);
+		jsMirror.setValue(jsData);
+		cssMirror.setValue(cssData);
+}
+function setEditorData(){
+	var htmlSource = htmlMirror.getValue();
+	var jsSource = jsMirror.getValue();
+	var cssSource = cssMirror.getValue();
+	if(window.localStorage){
+		localStorage.setItem("html_editor_data",htmlSource);
+		localStorage.setItem("js_editor_data",jsSource);
+		localStorage.setItem("css_editor_data",cssSource);
+	}
+}
+ 
+function idDom(id){
+	return document.getElementById(id)
+}
+ //获取url中的参数
+ function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+}	
+</script>
+</html>
+

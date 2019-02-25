@@ -8,12 +8,17 @@
      },
     "plugins": [
         
-         "theme-official@2.1.1","-sharing", "-fontsettings", "sitemap" ,"-lunr", "-search", "search-pro", "prism", "-highlight","donate","sectionx2","alerts"
+         "theme-official@2.1.1","-sharing", "-fontsettings", "sitemap" ,"-lunr", "-search", "search-pro", "prism", "-highlight","donate","sectionx2" 
     ],
     "pluginsConfig": {
       "sitemap": {
             "hostname": "http://192.168.32.128:4000/"
         },
+	  "prism": {
+	      "css": [
+                 "prismjs/themes/prism-tomorrow.css"
+               ]
+       },
   "donate": {
           "wechat": "/assets/images/IMG_1368.JPG",
           "alipay": "/assets/images/IMG_1369.JPG",
@@ -25,6 +30,5 @@
   "sectionx2": {
 	       "tag": "b"
 	}
-	
     }
 }

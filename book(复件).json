@@ -1,0 +1,54 @@
+{
+  "title": "HTML 教程",
+  "description": "HTML 教程- (HTML5 标准)  超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+    "styles": {
+        "website": "styles/website.css"
+     },
+    "plugins": [
+        
+        "-lunr", "-search", "search-pro","github",
+        "include-codeblock","ace", "advanced-emoji","disqus",
+        "pageview-count", "flexible-alerts",
+         "editlink","donate","anchor-navigation","sitemap","codepen","code-editor"
+    ],
+    "pluginsConfig": {
+        "include-codeblock": {
+            "template": "ace",
+            "theme": "monokai"
+        },
+                   "disqus": {
+            "shortName": "edit"
+        },
+                   "github": { 
+            "url": "https://github.com/yhczc/LearnBook"
+       },
+           "flexible-alerts": {     
+                "style": "flat"    
+       },
+                  "editlink": {
+      "base": "https://github.com/yhczc/LearnBook/edit/master/html",
+      "label": "编辑本页",
+      "multilingual": false
+    },
+                   "donate": {
+          "wechat": "/assets/images/IMG_1368.JPG",
+          "alipay": "/assets/images/IMG_1369.JPG",
+          "title": "",
+          "button": "赏",
+          "alipayText": "支付宝打赏",
+          "wechatText": "微信打赏"
+        },
+    "sitemap": {
+            "hostname": "http://192.168.32.128:4000/"
+        },
+                 "codepen": {
+      "height": 400,
+      "theme": 14038,
+      "description": "somepen",
+      "defaultTab": ["html","result"]
+    }
+
+    }
+}
