@@ -1,81 +1,43 @@
-## 什么是HTML? ##
-HTML 是用来描述网页的一种语言。
+# CSS 教程
 
- - HTML 指的是超文本标记语言: HyperText Markup Language
- - HTML 不是一种编程语言，而是一种标记语言
- - 标记语言是一套标记标签 (markup tag)
- - HTML 使用标记标签来描述网页
- - HTML 文档包含了HTML 标签及文本内容
- - HTML文档也叫做 web 页面`<html>`
+通过使用 CSS 我们可以大大提升网页开发的工作效率！
 
-## HTML 标签 ##
-- HTML 标记标签通常被称为 HTML 标签 (HTML tag)。
-- HTML 标签是由尖括号包围的关键词，比如 `<html>`
-- HTML 标签通常是成对出现的，比如 `<b>` 和 `</b>`
-- 标签对中的第一个标签是开始标签，第二个标签是结束标签
-- 开始和结束标签也被称为开放标签和闭合标签
+在我们的 CSS 教程中，您会学到如何使用 CSS 同时控制多重网页的样式和布局。
 
-## HTML 元素 ##
-"html 标签" 和 "html 元素" 通常都是描述同样的意思.
-但是严格来讲, 一个 html 元素包含了开始标签与结束标签，如下实例:
-HTML 元素:
+## 各章节实例
 
+本 CSS 教程包含了数百个CSS在线实例。
+
+通过本站的在线编辑器，你可以在线编辑CSS,并且可以在线查看修改后的效果。
+
+<!--sec data-title="CSS 实例" data-url='http://www.baidu.com' ces-->
 ```html
-  <p>这是一个段落。</p>
+body
+{
+    background-color:#d0e4fe;
+}
+h1
+{
+    color:orange;
+    text-align:center;
+}
+p
+{
+    font-family:"Times New Roman";
+    font-size:20px;
+}
 ```
-## Web 浏览器 ##
-Web浏览器（如谷歌浏览器，Internet Explorer，Firefox，Safari）是用于读取HTML文件，并将其作为网页显示。
-浏览器并不是直接显示的HTML标签，但可以使用标签来决定如何展现HTML页面的内容给用户：
-```html
-<html>
-<body>
+<!--endsec-->
 
-<h1>我的第一个标题</h1>
+## CSS 实例
 
-<p>我的第一个段落。</p>
+css 在线[150个实例](/css-tutorial.html "150个实例")，通过本站编辑器，你可以学习在线查看修改后css的运行效果。
 
-</body>
-</html>
-```
-## HTML 版本 ##
-最初的非标准化的超文本标记语言诞生后，HTML 已经更新了多个版本：
-<table> 
-   <tbody>
-    <tr> 
-     <th>版本</th> 
-     <th>发布时间</th> 
-    </tr> 
-    <tr> 
-     <td>HTML</td> 
-     <td>1991</td> 
-    </tr> 
-    <tr> 
-     <td>HTML+</td> 
-     <td>1993</td> 
-    </tr> 
-    <tr> 
-     <td>HTML 2.0</td> 
-     <td>1995</td> 
-    </tr> 
-    <tr> 
-     <td>HTML 3.2</td> 
-     <td>1997</td> 
-    </tr> 
-    <tr> 
-     <td>HTML 4.01</td> 
-     <td>1999</td> 
-    </tr> 
-    <tr> 
-     <td>XHTML 1.0</td> 
-     <td>2000</td> 
-    </tr> 
-    <tr> 
-     <td>HTML5</td> 
-     <td>2012</td> 
-    </tr> 
-    <tr> 
-     <td>XHTML5</td> 
-     <td>2013</td> 
-    </tr> 
-   </tbody>
-  </table>
+## CSS 参考手册
+
+在马桶教程中你可以找到更完整的CSS属性、选择器的语法，浏览器支持等资料.
+- [CSS 属性](/cssref/css-reference.html "CSS 属性")
+- [CSS 选择器参考手册](/cssref/css-selectors.html "CSS 选择器参考手册")
+- [CSS 声音参考手册](CSS 声音参考手册 "CSS 声音参考手册")
+- [CSS 单位](/cssref/css-selectors.html "CSS 单位")
+- [CSS 颜色参考手册](/cssref/css-colors.html "CSS 颜色参考手册")
