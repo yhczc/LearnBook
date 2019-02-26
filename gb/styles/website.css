@@ -1,3 +1,11 @@
+
+.list-group .list-group-item.active {
+    color: #3884ff;
+    border-left: 4px solid #3884ff!important;
+    font-weight: 500;
+    padding-left: 11px;
+}
+
 .gb-markdown code {
     background-color: #d4d4d4;
 }
@@ -116,4 +124,4 @@ blockquote.advisement {
 .no-underline:hover
 ,.no-underline a:hover {
     text-decoration: none;
-}
+}#fff

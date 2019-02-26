@@ -1,15 +1,18 @@
 {% extends template.self %}      
         {% block header %}
                {{ super() }}
-
-            <a href="/index.html" class="btn btn-link btn-md" role="button" data-reactid="11">
-                主页
+           
+            <a href="https://github.com/yhczc/LearnBook/{{ book.language }}/{{ file.path }}" target="_blank" class="btn btn-link pull-right hidden-xs">
+                <i class="octicon octicon-mark-github"></i> 改善此页面
             </a>
-            <a href="/js/" class="btn btn-link btn-md" role="button" data-reactid="11">
+            <a href="/js/" class="btn btn-link pull-right hidden-xs">
               JavaScript
             </a>
             </a>
-            <a href="/css/" class="btn btn-link btn-md" role="button" data-reactid="11">
+            <a href="/css/" class="btn btn-link pull-right hidden-xs">
               CSS
+            </a>
+            <a href="/index.html" class="btn btn-link pull-right hidden-xs">
+                主页
             </a>
         {% endblock %}

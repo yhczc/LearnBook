@@ -12,7 +12,7 @@
 
 ## JavaScript：直接写入 HTML 输出流
 
-<!--sec data-title="实例" ces-->
+<!--sec data-title="实例" data-url='http://www.baidu.com' ces-->
 
 ```javascript
 document.write("<h1>这是一个标题</h1>");
