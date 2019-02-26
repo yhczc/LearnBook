@@ -1,8 +1,8 @@
 # Summary
 
-### HTML 教程
+### CSS 教程
 
-* [HTML 教程](README.md)
+* [CSS 教程](README.md)
 * [HTML 简介](html-intro.md)
 * [HTML 编辑器](html-editors.md)
 
