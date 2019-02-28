@@ -10,7 +10,7 @@
 
 通过本站的在线编辑器，你可以在线编辑CSS,并且可以在线查看修改后的效果。
 
-<!--sec data-title="CSS 实例" data-url='http://www.baidu.com' ces-->
+<!--sec data-title="CSS 实例" data-url='/run/run.html?file=css_default' ces-->
 ```html
 body
 {

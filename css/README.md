@@ -10,7 +10,7 @@
 
 通过本站的在线编辑器，你可以在线编辑CSS,并且可以在线查看修改后的效果。
 
-<!--sec data-title="CSS 实例" data-url='http://www.baidu.com' ces-->
+<!--sec data-title="CSS 实例" data-filename="css_default" ces-->
 ```html
 body
 {
@@ -36,8 +36,8 @@ css 在线[150个实例](/css-tutorial.html "150个实例")，通过本站编辑
 ## CSS 参考手册
 
 在马桶教程中你可以找到更完整的CSS属性、选择器的语法，浏览器支持等资料.
-- [CSS 属性](/cssref/css-reference.html "CSS 属性")
-- [CSS 选择器参考手册](/cssref/css-selectors.html "CSS 选择器参考手册")
-- [CSS 声音参考手册](CSS 声音参考手册 "CSS 声音参考手册")
-- [CSS 单位](/cssref/css-selectors.html "CSS 单位")
-- [CSS 颜色参考手册](/cssref/css-colors.html "CSS 颜色参考手册")
+- [CSS 属性](../cssref/css-reference.html "CSS 属性")
+- [CSS 选择器参考手册](../cssref/css-selectors.html "CSS 选择器参考手册")
+- [CSS 声音参考手册](../cssref/CSS 声音参考手册 "CSS 声音参考手册")
+- [CSS 单位](../cssref/css-selectors.html "CSS 单位")
+- [CSS 颜色参考手册](../cssref/css-colors.html "CSS 颜色参考手册")
