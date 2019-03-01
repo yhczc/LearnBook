@@ -24,7 +24,7 @@
 
 外部样式表可以在任何文本编辑器中进行编辑。文件不能包含任何的 `html` 标签。样式表应该以 `.css` 扩展名进行保存。下面是一个样式表文件的例子：
 
-```html
+```css
 hr {color:sienna;}
 p {margin-left:20px;}
 body {background-image:url("/images/back40.gif");}
@@ -114,5 +114,5 @@ font-size:20pt;
 </body>
 ```
 
->[!Note]
+> [!Note]
 > 注意：如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。
