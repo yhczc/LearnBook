@@ -3,15 +3,6 @@
 ### CSS 教程
 
 * [CSS 教程](README.md)
-* [HTML 简介](css-intro.md)
-* [HTML 编辑器](html-editors.md)
-
-### Part II
-
-* [We love feedback](part2/feedback_please.md)
-* [Better tools for authors](part2/better_tools.md)
-
-----
-
-* [Last part without title](part3/title.md)
-
+* [CSS 简介](css-intro.md)
+* [CSS 语法](css-syntax.md)
+* [CSS Id 和 Class](css-id-class.md)
