@@ -29,7 +29,7 @@ CSS中，颜色值通常以以下方式定义:
 
 以下实例中, h1, p, 和 div 元素拥有不同的背景颜色:
 
-<!--sec data-title="实例" data-filename="css_syntax_id" ces-->
+<!--sec data-title="实例" data-filename="css_background-color_elements" ces-->
 ```css
 h1 {background-color:#6495ed;}
 p {background-color:#e0ffff;}
@@ -45,7 +45,7 @@ background-image 属性描述了元素的背景图像.
 
 页面背景图片设置实例:
 
-<!--sec data-title="实例" data-filename="css_syntax_id" ces-->
+<!--sec data-title="实例" data-filename="css_background-image" ces-->
 ```css
 body {background-image:url('paper.gif');}
 ```
@@ -53,7 +53,7 @@ body {background-image:url('paper.gif');}
 
 下面是一个例子是一个糟糕的文字和背景图像组合。文本可读性差:
 
-<!--sec data-title="实例" data-filename="css_syntax_id" ces-->
+<!--sec data-title="实例" data-filename="css_background-image_bad" ces-->
 ```css
 body {background-image:url('bgdesert.jpg');}
 ```
@@ -76,7 +76,7 @@ background-image:url('gradient2.png');
 
 如果图像只在水平方向平铺 (repeat-x), 页面背景会更好些:
 
-<!--sec data-title="实例" data-filename="css_syntax_id" ces-->
+<!--sec data-title="实例" data-filename="css_background-image_gradient1" ces-->
 ```css
 body
 {
@@ -92,7 +92,7 @@ background-repeat:repeat-x;
 
 如果你不想让图像平铺，你可以使用 background-repeat 属性:
 
-<!--sec data-title="实例" data-filename="css_syntax_id" ces-->
+<!--sec data-title="实例" data-filename="css_background-image_gradient2" ces-->
 ```css
 body
 {
@@ -106,7 +106,7 @@ background-repeat:no-repeat;
 
 可以利用 background-position 属性改变图像在背景中的位置:
 
-<!--sec data-title="实例" data-filename="css_syntax_id" ces-->
+<!--sec data-title="实例" data-filename="css_background-image_norepeat" ces-->
 ```css
 body
 {
@@ -125,9 +125,11 @@ background-position:right top;
 
 背景颜色的简写属性为 "background":
 
+<!--sec data-title="实例" data-filename="css_background-image_position" ces-->
 ```css
 body {background:#ffffff url('img_tree.png') no-repeat right top;}
 ```
+<!--endsec-->
 
 当使用简写属性时，属性值的顺序为：
 
