@@ -63,7 +63,7 @@ body {background-image:url("images/back40.gif");}
 
 例如，外部样式表拥有针对 h3 选择器的三个属性：
 
-```html
+```css
 h3
 {
     color:red;
@@ -74,7 +74,7 @@ h3
 
 而内部样式表拥有针对 h3 选择器的两个属性：
 
-```html
+```css
 h3
 {
     text-align:right;
