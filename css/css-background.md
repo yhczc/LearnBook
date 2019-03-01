@@ -65,7 +65,7 @@ body {background-image:url('bgdesert.jpg');}
 
 一些图像如果在水平方向与垂直方向平铺，这样看起来很不协调，如下所示: 
 
-<!--sec data-title="实例" data-filename="css_syntax_id" ces-->
+<!--sec data-title="实例" data-filename="css_background-image_gradient1" ces-->
 ```css
 body
 {
@@ -76,7 +76,7 @@ background-image:url('gradient2.png');
 
 如果图像只在水平方向平铺 (repeat-x), 页面背景会更好些:
 
-<!--sec data-title="实例" data-filename="css_background-image_gradient1" ces-->
+<!--sec data-title="实例" data-filename="css_background-image_gradient2" ces-->
 ```css
 body
 {
@@ -92,7 +92,7 @@ background-repeat:repeat-x;
 
 如果你不想让图像平铺，你可以使用 background-repeat 属性:
 
-<!--sec data-title="实例" data-filename="css_background-image_gradient2" ces-->
+<!--sec data-title="实例" data-filename="css_background-image_norepeat" ces-->
 ```css
 body
 {
@@ -106,7 +106,7 @@ background-repeat:no-repeat;
 
 可以利用 background-position 属性改变图像在背景中的位置:
 
-<!--sec data-title="实例" data-filename="css_background-image_norepeat" ces-->
+<!--sec data-title="实例" data-filename="css_background-image_position" ces-->
 ```css
 body
 {
@@ -125,7 +125,7 @@ background-position:right top;
 
 背景颜色的简写属性为 "background":
 
-<!--sec data-title="实例" data-filename="css_background-image_position" ces-->
+<!--sec data-title="实例" data-filename="css_background_shorthand" ces-->
 ```css
 body {background:#ffffff url('img_tree.png') no-repeat right top;}
 ```
