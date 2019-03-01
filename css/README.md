@@ -11,7 +11,7 @@
 通过本站的在线编辑器，你可以在线编辑CSS,并且可以在线查看修改后的效果。
 
 <!--sec data-title="CSS 实例" data-filename="css_default" ces-->
-```html
+```css
 body
 {
     background-color:#d0e4fe;
