@@ -8,7 +8,7 @@
      },
     "plugins": [
         
-         "theme-official@2.1.1","-sharing", "-fontsettings", "sitemap" ,"-lunr", "-search", "search-pro", "prism", "-highlight","donate","sectionx2","alerts"
+         "theme-official@2.1.1","-sharing", "-fontsettings", "sitemap" ,"-lunr", "-search", "search-pro", "prism", "-highlight","donate","sectionx2","flexible-alerts@1.0.2"
     ],
     "pluginsConfig": {
       "sitemap": {

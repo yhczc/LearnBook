@@ -22,8 +22,7 @@ HTML元素以id属性来设置id选择器,CSS 中 id 选择器以 "#" 来定义�
 ```
 <!--endsec-->
 
-> [!TIP]
-> 
+> [!Warning] 
 > ID属性不要以数字开头，数字开头的ID在 Mozilla/Firefox 浏览器中不起作用。
 
 ## class 选择器
@@ -40,9 +39,8 @@ class 选择器在HTML中以class属性表示, 在 CSS 中，类选择器以一�
 ```
 <!--endsec-->
 
->  [!TIP]
->
->你也可以指定特定的HTML元素使用class。
+> [!TIP] 
+> 你也可以指定特定的HTML元素使用class。
 
 在以下实例中, 所有的 p 元素使用 `class="center"` 让该元素的文本居中:
 
@@ -52,6 +50,5 @@ p.center {text-align:center;}
 ```
 <!--endsec-->
 
->  [!TIP]
-> 
+> [!Warning] 
 >  类名的第一个字符不能使用数字！它无法在 Mozilla 或 Firefox 中起作用。
