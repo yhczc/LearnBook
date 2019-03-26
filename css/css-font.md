@@ -261,11 +261,11 @@ strong {
 
 **strong：24 × 200% = 48px**
 
-
 在这种多层嵌套的情况下，如果某一个计算结果不是整数，浏览器可能就会取整，子元素再继承取整后的值。如果嵌套很深，下层的字体大小就越来越偏离实际计算值。并且，由于参考基准总是随着元素发生变化，嵌套越深，计算起来也就越困难。
 
 鉴于此，CSS3中新增的一个相对单位 rem（root em的简称），它总是以文档的根元素（即 html 元素）为参考基准，来设置其它元素的字体大小，即 1rem 相当于 html 元素 font-size属性的值。考虑以下代码：
 
+<!--sec data-title="实例" data-filename="css_font-size_relative4" ces-->
 ```css
 html {
  font-size: 10px;
@@ -274,6 +274,7 @@ strong {
  font-size: 1.4rem;
 }
 ```
+<!--endsec-->
 
 上述声明中，strong 元素的字体大小将是 html 字体大小的1.4倍，则计算得到 strong 元素的字体大小就是1.4 × 10px = 14px。
 
