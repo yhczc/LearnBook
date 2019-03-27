@@ -31,6 +31,21 @@ ol.d {list-style-type: lower-alpha;}
 
 一些值是无序列表，以及有些是有序列表。
 
+list-style-type属性用来定义列表所使用的项目符号的类型，可选值有 none | disc | circle | square | decimal | decimal-leading-zero | lower-alpha | upper-alpha | lower-roman | upper-roman，默认值为 disc。常用属性值如下：
+
+| 属性值  | 属性值  |
+| ------------ | ------------ |
+| none  | 不使用任何项目符号  |
+| disc  | 默认值，实心圆  |
+| circle  | 空心圆  |
+| square  | 实心矩形  |
+| decimal  | 数字1、2、3、4、5  |
+| decimal-leading-zero  | 以0打头的数字，01、02、03、04、05  |
+| lower-alpha  | 小写英文字母，a、b、c、d、e  |
+| upper-alpha  | 大写英文字母，A、B、C、D、E  |
+| lower-roman  | 小写罗马数字，ⅰ、ⅱ、ⅲ、ⅳ、ⅴ  |
+| upper-roman  | 大写罗马数字，Ⅰ、Ⅱ、Ⅲ、Ⅳ、Ⅴ  |
+
 ## 作为列表项标记的图像
 
 要指定列表项标记的图像，使用列表样式图像属性：
