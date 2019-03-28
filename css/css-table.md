@@ -180,7 +180,7 @@ th, td {
 ```
 <!--endsec-->
 
-![border-collapse属性效果](../..run/example_source/border-collapse.png "border-collapse属性效果")
+![border-collapse属性效果](..run/example_source/border-collapse.png "border-collapse属性效果")
 
 上图中，左侧表格采用独立边框，右侧表格采用合并边框。为了清楚可见，为单元格定义1px的灰色边框，即每个单元格各自有1px的边框。独立边框还定义了2px的边框间隙。
 
