@@ -54,7 +54,7 @@ table, th, td
 
 无论是块级框，还是行内级框，table元素都会生成一个主框，其中包含一个 table 框和一个 caption 框。如下图所示：
 
-![表格的可视化模型](../run/example_source/table_container.png "表格的可视化模型")
+![表格的可视化模型](img/table_container.png "表格的可视化模型")
 
 上图中，灰色虚线框的区域为 table元素形成的主框，蓝色区域为 table 框，红色区域为 caption 框，它们是两个独立的框，有各自独立的盒属性，如 marging、border等。主框的外边距，由 table元素 margin 属性定义。
 
