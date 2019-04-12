@@ -12,6 +12,10 @@
 * [JavaScript 变量](js-variables.md) 
 * [JavaScript 数据类型](js-datatypes.md) 
 * [JavaScript 对象](js-obj-intro.md) 
-
-
+* [JavaScript 函数](js-functions.md) 
+* [JavaScript 作用域](js-scope.md) 
+* [JavaScript 事件](js-events.md) 
+* [JavaScript 字符串](js-strings.md) 
+* [JavaScript 运算符](js-operators.md) 
+* [JavaScript 比较](js-comparisons.md) 
 
