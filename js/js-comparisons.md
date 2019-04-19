@@ -6,21 +6,21 @@
 
 比较运算符在逻辑语句中使用，以测定变量或值是否相等。
 
-x=5，下面的表格解释了比较运算符：
+**x=5，下面的表格解释了比较运算符：**
 
 |  运算符 | 描述  | 比较  | 返回值  | 实例  |
 | :------------ | :------------ | :------------ | :------------ | :------------ |
-| ==  | 等于 | x==8  | false  | [实例](../run/run.html#filename=yjs_comparison1 "实例")  |
-| ==  | 等于 | x==5  | true  | [实例](../run/run.html#filename=yjs_comparison2 "实例")  |
-| ===  | 绝对等于（值和类型均相等）  | x==="5"  | false  | [实例](../run/run.html#filename=yjs_comparison3 "实例")  |
-| ===   | 绝对等于（值和类型均相等）  | x===5  | true  | [实例](../run/run.html#filename=yjs_comparison4 "实例")  |
-| !=  | 不等于  | x!=8  | true  | [实例](../run/run.html#filename=yjs_comparison5 "实例")  |
-| !==  | 不绝对等于（值和类型有一个不相等，或两个都不相等）  | x!=="5"  | true  | [实例](../run/run.html#filename=yjs_comparison6 "实例")  |
-| !==  | 不绝对等于（值和类型有一个不相等，或两个都不相等）  | x!==5  | false  | [实例](../run/run.html#filename=yjs_comparison7 "实例")  |
-| >  | 大于  | x>8  | false  | [实例](../run/run.html#filename=yjs_comparison8 "实例")  |
-| <  | 小于  | x<8  | true  | [实例](../run/run.html#filename=yjs_comparison9 "实例")  |
-| >=  | 大于或等于  | x>=8  | false  | [实例](../run/run.html#filename=yjs_comparison10 "实例")  |
-| <=  | 小于或等于  | x<=8  | true  | [实例](../run/run.html#filename=yjs_comparison11 "实例")  |
+| ==  | 等于 | x==8  | false  | [实例](../run/run.html#filename=js_comparison1 "实例")  |
+| ==  | 等于 | x==5  | true  | [实例](../run/run.html#filename=js_comparison2 "实例")  |
+| ===  | 绝对等于（值和类型均相等）  | x==="5"  | false  | [实例](../run/run.html#filename=js_comparison3 "实例")  |
+| ===   | 绝对等于（值和类型均相等）  | x===5  | true  | [实例](../run/run.html#filename=js_comparison4 "实例")  |
+| !=  | 不等于  | x!=8  | true  | [实例](../run/run.html#filename=js_comparison5 "实例")  |
+| !==  | 不绝对等于（值和类型有一个不相等，或两个都不相等）  | x!=="5"  | true  | [实例](../run/run.html#filename=js_comparison6 "实例")  |
+| !==  | 不绝对等于（值和类型有一个不相等，或两个都不相等）  | x!==5  | false  | [实例](../run/run.html#filename=js_comparison7 "实例")  |
+| >  | 大于  | x>8  | false  | [实例](../run/run.html#filename=js_comparison8 "实例")  |
+| <  | 小于  | x<8  | true  | [实例](../run/run.html#filename=js_comparison9 "实例")  |
+| >=  | 大于或等于  | x>=8  | false  | [实例](../run/run.html#filename=js_comparison10 "实例")  |
+| <=  | 小于或等于  | x<=8  | true  | [实例](../run/run.html#filename=js_comparison11 "实例")  |
 
 ## 如何使用
 
