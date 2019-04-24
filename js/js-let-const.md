@@ -16,7 +16,7 @@ const 声明一个只读的常量，一旦声明，常量的值就不能改变�
 
 <!--sec data-title="实例" data-filename="js_scope_global" ces-->
 ```javascript
-varcarName = "Volvo";
+var carName = "Volvo";
 
 // 这里可以使用 carName 变量
 
@@ -51,15 +51,11 @@ function myFunction(){
 
 使用 var 关键字声明的变量不具备块级作用域的特性，它在 {} 外依然能被访问到。
 
-```
+```javascript
 {
     var x = 2;
 }
 // 这里可以使用 x 变量
-```
-
-```
-在 ES6 之前，是没有块级作用域的概念的。
 ```
 
 在 ES6 之前，是没有块级作用域的概念的。
@@ -68,7 +64,7 @@ ES6 可以使用 let 关键字来实现块级作用域。
 
 let 声明的变量只在 let 命令所在的代码块 {} 内有效，在 {} 之外不能访问。
 
-```
+```javascript
 {
     let x = 2;
 }
@@ -83,7 +79,7 @@ let 声明的变量只在 let 命令所在的代码块 {} 内有效，在 {} 之
 
 <!--sec data-title="实例" data-filename="js_es6_var" ces-->
 ```javascript
-varx = 10;
+var x = 10;
 // 这里输出 x 为 10
 {
    var x = 2;
@@ -97,7 +93,7 @@ let 关键字就可以解决这个问题，因为它只在 let 命令所在的�
 
 <!--sec data-title="实例" data-filename="js_es6_let" ces-->
 ```javascript
-varx = 10;
+var x = 10;
 // 这里输出 x 为 10
 {
    let x = 2;
@@ -143,7 +139,7 @@ Internet Explorer 11 及更早版本的浏览器不支持 let 关键字。
 
 <!--sec data-title="实例" data-filename="js_let_for_loop1" ces-->
 ```javascript
-vari = 5;
+var i = 5;
 for (var i = 0; i < 10; i++) {
      // 一些代码...
 }
@@ -173,7 +169,7 @@ for (let i = 0; i < 10; i++) {
 
 它们的作用域都是 局部的:
 
-```
+```javascript
 // 使用 var
 function myFunction() {
     var carName = "Volvo";   // 局部作用域
@@ -191,7 +187,7 @@ function myFunction() {
 
 它们的作用域都是 **全局的**:
 
-```
+```javascript
 // 使用 var
 var x = 2;       // 全局作用域
 
@@ -240,7 +236,7 @@ var x = 3;
 
 在相同的作用域或块级作用域中，不能使用 **let** 关键字来重置 **var** 关键字声明的变量:
 
-```
+```javascript
 var x = 2;       // 合法
 let x = 3;       // 不合法
 
@@ -252,7 +248,7 @@ let x = 3;       // 不合法
 
 在相同的作用域或块级作用域中，不能使用 **let** 关键字来重置 **let** 关键字声明的变量:
 
-```
+```javascript
 let x = 2;       // 合法
 let x = 3;       // 不合法
 
@@ -264,7 +260,7 @@ let x = 3;       // 不合法
 
 在相同的作用域或块级作用域中，不能使用 **var** 关键字来重置 **let** 关键字声明的变量:
 
-```
+```javascript
 let x = 2;       // 合法
 var x = 3;       // 不合法
 
@@ -276,7 +272,7 @@ var x = 3;       // 不合法
 
 **let** 关键字在不同作用域，或不同块级作用域中是可以重新声明赋值的:
 
-```
+```javascript
 let x = 2;       // 合法
 
 {
@@ -330,7 +326,7 @@ const定义常量与使用let 定义的变量相似：
 - const声明的常量必须初始化，而let声明的变量不用
 - const 定义常量的值不能通过再赋值修改，也不能再次声明。而 let 定义的变量值可以修改。
 
-```
+```javascript
 var x = 10;
 // 这里输出 x 为 10
 {
@@ -342,7 +338,7 @@ var x = 10;
 
 const 声明的常量必须初始化：
 
-```
+```javascript
 // 错误写法
 const PI;
 PI = 3.14159265359;
@@ -461,7 +457,7 @@ const x = 2;       // 不合法
 
 在相同的作用域或块级作用域中，不能使用 **const** 关键字来重置 **const** 关键字声明的变量:
 
-```
+```javascript
 const x = 2;       // 合法
 const x = 3;       // 不合法
 x = 3;             // 不合法
@@ -479,7 +475,7 @@ let x = 3;         // 不合法
 
 **const** 关键字在不同作用域，或不同块级作用域中是可以重新声明赋值的:
 
-```
+```javascript
 const x = 2;       // 合法
 
 {
@@ -504,7 +500,7 @@ var carName;
 
 const 关键字定义的变量则不可以在使用后声明，也就是变量需要先声明再使用。
 
-```
+```javascript
 carName = "Volvo";    // 在这里不可以使用 carName 变量
 const carName = "Volvo";
 ```

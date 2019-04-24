@@ -7,11 +7,11 @@ HTML 表单验证可以通过 JavaScript 来完成。
 以下实例代码用于判断表单字段(fname)值是否存在，如果存在，则弹出信息，否则阻止表单提交：
 
 ```javascript
-functionvalidateForm() {
-    varx = document.forms["myForm"]["fname"].value;
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
     if (x == null || x == "") {
         alert("需要输入名字。");
-        returnfalse;
+        return false;
     }
 }
 ```
@@ -19,9 +19,9 @@ functionvalidateForm() {
 
 <!--sec data-title="HTML 表单实例" data-filename="js_validation_js" ces-->
 ```html
-<form name = "myForm" action = "demo_form.php" onsubmit = "return validateForm()" method="post" >
-名字: < input type = "text" name = "fname" >
-<input type = "submit" value = "提交" >
+<form name="myForm" action="demo_form.php" onsubmit="return validateForm()" method="post">
+名字: <input type="text" name="fname">
+<input type="submit" value="提交">
 </form>
 ```
 <!--endsec-->
@@ -61,10 +61,10 @@ HTML 表单验证也可以通过浏览器来自动完成。
 
 <!--sec data-title="实例" data-filename="js_validation_html" ces-->
 ```html
-<form action = "demo_form.php" method = "post" >
-  < inputtype = "text" name = "fname" required = "required" >
-  < inputtype = "submit" value = "提交" >
-< /form>
+<form action="demo_form.php" method="post">
+  <input type="text" name="fname" required="required">
+  <input type="submit" value="提交">
+</form>
 ```
 <!--endsec-->
 

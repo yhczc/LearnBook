@@ -23,7 +23,7 @@ document.write(cars[5] + "<br>");
 使用for循环
 
 ```javascript
-for (vari = 0; i < cars.length; i++) {
+for (var i = 0; i < cars.length; i++) {
     document.write(cars[i] + "<br>");
 }
 ```
@@ -59,7 +59,7 @@ for (语句 1; 语句 2; 语句 3)
 
 <!--sec data-title="实例" data-filename="js_loop_for_ex" ces-->
 ```javascript
-for (vari = 0; i < 5; i++) {
+for (var i = 0; i < 5; i++) {
     x = x + "该数字为" + i + "<br>";
 }
 ```
@@ -83,7 +83,7 @@ Statement 3 在每次代码块已被执行后增加一个值 (i++)。
 
 <!--sec data-title="实例" data-filename="js_loop_for_om1" ces-->
 ```javascript
-for (vari = 0, len = cars.length; i < len; i++) {
+for (var i = 0, len = cars.length; i < len; i++) {
     document.write(cars[i] + "<br>");
 }
 ```
@@ -93,7 +93,7 @@ for (vari = 0, len = cars.length; i < len; i++) {
 
 <!--sec data-title="实例" data-filename="js_loop_for_om2" ces-->
 ```javascript
-vari = 2, len = cars.length;
+var i = 2, len = cars.length;
 for (; i < len; i++) {
     document.write(cars[i] + "<br>");
 }
@@ -123,7 +123,7 @@ for (; i < len; i++) {
 
 <!--sec data-title="实例" data-filename="js_loop_for_om3" ces-->
 ```javascript
-vari = 0, len = cars.length;
+var i = 0, len = cars.length;
 for (; i < len;) {
     document.write(cars[i] + "<br>");
     i++;
@@ -137,8 +137,7 @@ JavaScript for/in 语句循环遍历对象的属性：
 
 <!--sec data-title="实例" data-filename="js_object_for_in" ces-->
 ```javascript
-varperson = { fname:"John", lname:"Doe", age:25
-};
+var person = { fname:"John", lname:"Doe", age:25};
 
 for (x in person) // x 为属性名
 {

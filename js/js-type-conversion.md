@@ -38,7 +38,7 @@ typeof {name:'John', age:34}   // 返回 object
 typeof new Date()              // 返回 object
 typeof function () {}          // 返回 function
 typeof myCar                   // 返回 undefined (如果 myCar 没有声明)
-typeo fnull                    // 返回 object
+typeof null                    // 返回 object
 ```
 <!--endsec-->
 

@@ -16,7 +16,7 @@ JavaScript 可用来在数据被送往服务器前对 HTML 表单中的这些输
 下面的函数用来检查用户是否已填写表单中的必填（或必选）项目。假如必填或必选项为空，那么警告框会弹出，并且函数的返回值为 false，否则函数的返回值则为 true（意味着数据没有问题）：
 
 ```javascript
-functionvalidateForm() {
+function validateForm() {
     varx = document.forms["myForm"]["fname"].value;
     if (x == null || x == "") {
         alert("姓必须填写");
@@ -29,8 +29,9 @@ functionvalidateForm() {
 
 <!--sec data-title="实例" data-filename="js_form_validation" ces-->
 ```html
-<form name="myForm" action="demo-form.php" onsubmit="return validateForm()" method="post" id="myForm">
-姓: <input type="text" name="fname"> <input type="submit" value="提交">
+<form name="myForm" action="demo-form.php" onsubmit="return validateForm()" method="post">
+姓: <input type="text" name="fname">
+<input type="submit" value="提交">
 </form>
 ```
 <!--endsec-->
@@ -42,14 +43,14 @@ functionvalidateForm() {
 意思就是说，输入的数据必须包含 @ 符号和点号(.)。同时，@ 不可以是邮件地址的首字符，并且 @ 之后需有至少一个点号：
 
 ```javascript
-functionvalidateForm() {
-    varx = document.forms["myForm"]["email"].value;
-    varatpos = x.indexOf("@");
-    vardotpos = x.lastIndexOf(".");
-    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
-        alert("不是一个有效的 e-mail 地址");
-        returnfalse;
-    }
+function validateForm(){
+  var x=document.forms["myForm"]["email"].value;
+  var atpos=x.indexOf("@");
+  var dotpos=x.lastIndexOf(".");
+  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+    alert("不是一个有效的 e-mail 地址");
+    return false;
+  }
 }
 ```
 
@@ -57,8 +58,9 @@ functionvalidateForm() {
 
 <!--sec data-title="实例" data-filename="js_form_validate_email" ces-->
 ```html
-<form name="myForm" action="demo-form.php" onsubmit="return validateForm();" method="post" id="myForm">
- Email: <input type="text" name="email"> <input type="submit" value="提交">
+<form name="myForm" action="demo-form.php" onsubmit="return validateForm();" method="post">
+    Email: <input type="text" name="email">
+    <input type="submit" value="提交">
 </form>
 ```
 <!--endsec-->

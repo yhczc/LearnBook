@@ -56,9 +56,20 @@ input 元素的 validity 属性包含一系列关于 validity 数据属性:
 
 <!--sec data-title="实例" data-filename="js_validation_rangeOverflow" ces-->
 ```javascript
-< inputid = "id1"
-type = "number"
-max = "100" > < buttononclick = "myFunction()" > 验证 < /button><pid="demo"></p > < script >
+<input id="id1" type="number" max="100">
+<button onclick="myFunction()">验证</button>
+ 
+<p id="demo"></p>
+ 
+<script>
+function myFunction() {
+    var txt = "";
+    if (document.getElementById("id1").validity.rangeOverflow) {
+       txt = "输入的值太大了";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
 ```
 <!--endsec-->
 
