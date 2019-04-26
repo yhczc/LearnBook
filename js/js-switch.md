@@ -41,7 +41,6 @@ switch (d) {
 ```
 
 x 的运行结果：
-<html>
 <script>
 var d=new Date().getDay();
 switch (d)
@@ -63,7 +62,6 @@ switch (d)
 }
 document.write(x);
 </script>
-</html>
 <!--endsec-->
 
 ## default 关键词
@@ -87,7 +85,7 @@ document.getElementById("demo").innerHTML = x;
 ```
 
 x 的运行结果：
-<html>
+
 <script>
 var x;
 var d=new Date().getDay();
@@ -102,5 +100,4 @@ switch (d)
 }
 document.write(x);
 </script>
-</html>
 <!--endsec-->
