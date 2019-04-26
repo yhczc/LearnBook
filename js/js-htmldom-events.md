@@ -1,14 +1,39 @@
+<script type = "text/javascript">
+function clickMeEvent(obj) {
+    if (obj.innerHTML == "Goodbye") {
+        obj.style.display = "none";
+    } else if (obj.innerHTML == "Thank You") {
+        obj.innerHTML = "Goodbye";
+    } else if (obj.innerHTML == "Click Me<br>Click Me Again<br>And Again") {
+        obj.innerHTML = "Thank You";
+    } else if (obj.innerHTML == "Click Me<br>Click Me Again") {
+        obj.innerHTML = obj.innerHTML + "<br>And Again";
+    } else {
+        obj.innerHTML = obj.innerHTML + "<br>Click Me Again";
+    }
+} 
+</script>
+<script type = "text/javascript">
+function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "Release Me "
+}
+function mUp(obj) {
+    obj.style.backgroundColor = "#D94A38";
+    obj.innerHTML = "Thank You "
+} </script>
+
 # JavaScript HTML DOM 事件
 
 HTML DOM 使 JavaScript 有能力对 HTML 事件做出反应。
 
 <!--sec data-title="实例" data-filename="" ces-->
- <div style="width:100%;height:140px;"> 
+  <div style="width:100%;height:140px;"> 
    <div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;" onmouseover="this.innerHTML='Thank You'" onmouseout="this.innerHTML='Mouse Over Me'">
-    Mouse Over Me
+     Mouse Over Me 
    </div> 
    <div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;" onclick="clickMeEvent(this)">
-    Click Me
+     Click Me 
    </div> 
   </div>
 <!--endsec-->

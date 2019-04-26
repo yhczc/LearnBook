@@ -10,7 +10,8 @@ JavaScript 变量可以是局部变量或全局变量。
 
 <!--sec data-title="实例" data-filename="js_function_scope2" ces-->
 ```javascript
-function myFunction(){vara = 4;
+function myFunction(){
+var a = 4;
     return a * a;
 }
 ```
@@ -20,7 +21,7 @@ function myFunction(){vara = 4;
 
 <!--sec data-title="实例" data-filename="js_function_scope1" ces-->
 ```javascript
-vara = 4;
+var a = 4;
 function myFunction() {
     return a * a;
 }
