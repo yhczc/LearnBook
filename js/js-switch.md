@@ -41,7 +41,6 @@ switch (d) {
 ```
 
 x 的运行结果：
-<div class="example_code">
 <script>
 var d=new Date().getDay();
 switch (d)
@@ -63,7 +62,6 @@ switch (d)
 }
 document.write(x);
 </script>
-</div>
 <!--endsec-->
 
 ## default 关键词
