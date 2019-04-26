@@ -158,4 +158,4 @@ function myStopFunction() {
 
 ## 更多实例
 
-<a target="_blank" href="/run/run.html#filename=js_timing2">另一个简单的计时</a>
+<a target="_blank" href="../run/run.html#filename=js_timing2">另一个简单的计时</a>

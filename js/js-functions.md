@@ -2,7 +2,7 @@
 
 函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。
 
-<!--sec data-title="实例" data-filename="tryjs_function_xx" ces-->
+<!--sec data-title="实例" data-filename="js_function_xx" ces-->
 ```html
 <!DOCTYPE html>
 <html>
@@ -65,7 +65,7 @@ function myFunction(var1,var2)
 
 变量和参数必须以一致的顺序出现。第一个变量就是第一个被传递的参数的给定的值，以此类推。
 
-<!--sec data-title="实例" data-filename="tryjs_function_xx" ces-->
+<!--sec data-title="实例" data-filename="js_function_xx" ces-->
 ```html
 <p>点击这个按钮，来调用带参数的函数。</p>
 <button onclick="myFunction('Harry Potter','Wizard')">点击这里</button>
@@ -84,8 +84,8 @@ function myFunction(name,job){
 <!--sec data-title="实例" data-filename="js_function3" ces-->
 ```html
 <button onclick="myFunction('Harry Potter','Wizard')">点击这里</button>
-<button onclick="myFunction('Bob','Builder')">点击这里</button
-```>
+<button onclick="myFunction('Bob','Builder')">点击这里</button>
+```
 <!--endsec-->
 
 根据您点击的不同的按钮，上面的例子会提示 "Welcome Harry Potter, the Wizard" 或 "Welcome Bob, the Builder"。
