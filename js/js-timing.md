@@ -29,7 +29,7 @@ setInterval() 第一个参数是函数（function）。
 
 **注意:** 1000 毫秒是一秒。
 
-<!--sec data-title="每三秒弹出 \"hello\"" data-filename="js_setinterval1" ces-->
+<!--sec data-title="每三秒弹出 &quot;hello&quot;" data-filename="js_setinterval1" ces-->
 ```javascript
 setInterval(function() {
     alert("Hello")
@@ -72,12 +72,12 @@ window.clearInterval(intervalVariable)
 要使用 clearInterval() 方法, 在创建计时方法时你必须使用全局变量：
 
 ```javascript
-myVar=setInterval("javascript function",milliseconds);
+my Var=setInterval("javascript function",milliseconds);
 ```
 
 然后你可以使用clearInterval() 方法来停止执行。
 
-<!--sec data-title="以下例子,我们添加了 \"停止\" 按钮" data-filename="js_setinterval3" ces-->
+<!--sec data-title="以下例子,我们添加了 &quot;停止&quot; 按钮" data-filename="js_setinterval3" ces-->
 ```html
 <p id="demo"></p>
 <button onclick="myStopFunction()">停止</button>
@@ -100,7 +100,7 @@ function myStopFunction(){
 ### 语法
 
 ```javascript
-myVar= window.setTimeout("javascript function", milliseconds);
+my Var= window.setTimeout("javascript function", milliseconds);
 ```
 
 setTimeout() 方法会返回某个值。在上面的语句中，值被储存在名为 myVar 的变量中。假如你希望取消这个 setTimeout()，你可以使用这个变量名来指定它。
@@ -111,7 +111,7 @@ setTimeout() 的第一个参数是含有 JavaScript 语句的字符串。这个�
 
 **提示：**1000 毫秒等于一秒。
 
-<!--sec data-title="等待3秒，然后弹出 \"Hello\"" data-filename="js_timing1" ces-->
+<!--sec data-title="等待3秒，然后弹出 &quot;Hello&quot;" data-filename="js_timing1" ces-->
 ```javascript
 setTimeout(function() {
     alert("Hello")
