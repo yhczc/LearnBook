@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var txt="";
+    txt+="文档 width/height: " + $(document).width();
+    txt+="x" + $(document).height() + "\n";
+    txt+="窗口 width/height: " + $(window).width();
+    txt+="x" + $(window).height();
+    alert(txt);
+  });
+});
+</script>
+</head>
+<body>
+
+<button>显示文档和窗口的尺寸</button>
+
+</body>
+</html>
